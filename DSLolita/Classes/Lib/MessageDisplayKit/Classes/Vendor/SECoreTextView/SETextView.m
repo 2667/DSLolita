@@ -129,6 +129,7 @@ static NSString * const PARAGRAPH_SEPARATOR = @"\u2029";
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     [self commonInit];
 }
 

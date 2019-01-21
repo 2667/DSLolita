@@ -489,6 +489,7 @@ static CGPoint  delayOffset = {0.0};
 }
 
 - (void)awakeFromNib {
+      [super awakeFromNib];
     [self setup];
 }
 

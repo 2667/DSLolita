@@ -20,7 +20,7 @@
 @interface DSTabBarController () <DSTabBarDelegate>
 
 @property (nonatomic , weak)DSHomeViewController *homeViewController;
-@property (nonatomic , weak)DSMessageViewController *messageViewController;
+@property (nonatomic , strong)DSMessageViewController *messageViewController;
 @property (nonatomic , weak)DSProfileViewController *profileViewController;
 
 @end
@@ -130,8 +130,20 @@
 - (void)addAllChildVcs
 {
     
+//    DSHomeViewController *home = [[DSHomeViewController alloc] init];
+//    [self addOneChildVc:home title:@"首页" imageName:@"tabbar_home" selectedImageName:@"tabbar_home_selected"];
+//    _homeViewController = home;
+//    DSConvsVC *message = [[DSConvsVC alloc] init];
+//    [self addOneChildVc:message title:@"消息" imageName:@"tabbar_message_center" selectedImageName:@"tabbar_message_center_selected"];
+//    _messageViewController = message;
+//    DSDiscoverViewController *discover = [[DSDiscoverViewController alloc] init];
+//    [self addOneChildVc:discover title:@"发现" imageName:@"tabbar_discover" selectedImageName:@"tabbar_discover_selected"];
+//    DSProfileViewController *profile = [[DSProfileViewController alloc] init];
+//    [self addOneChildVc:profile title:@"我" imageName:@"tabbar_profile" selectedImageName:@"tabbar_profile_selected"];
+//    _profileViewController = profile;
+
     DSHomeViewController *home = [[DSHomeViewController alloc] init];
-    [self addOneChildVc:home title:@"首页" imageName:@"tabbar_home" selectedImageName:@"tabbar_home_selected"];
+    [self addOneChildVc:home title:@"首页" imageName:@"home" selectedImageName:@"home_Selected"];
     _homeViewController = home;
     DSConvsVC *message = [[DSConvsVC alloc] init];
     [self addOneChildVc:message title:@"消息" imageName:@"tabbar_message_center" selectedImageName:@"tabbar_message_center_selected"];
@@ -159,7 +171,8 @@
 {
     //设置底部tabbar的主题样式
     UITabBarItem *appearance = [UITabBarItem appearance];
-    [appearance setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:DSCommonColor, NSForegroundColorAttributeName,nil] forState:UIControlStateSelected];
+//    [appearance setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:DSCommonColor, NSForegroundColorAttributeName,nil] forState:UIControlStateSelected];
+    [appearance setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:DSTabbarColor, NSForegroundColorAttributeName,nil] forState:UIControlStateSelected];
 }
 
 

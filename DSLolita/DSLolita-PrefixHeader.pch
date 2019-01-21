@@ -45,6 +45,9 @@
 #define DSColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 //公用颜色
 #define DSCommonColor [UIColor colorWithRed:254/255.0  green:129/255.0 blue:0 alpha:1.0]
+
+#define DSTabbarColor [UIColor colorWithRed:27/255.0  green:181/255.0 blue:248 alpha:1.0]
+
 //导航栏标题字体大小
 #define DSNavigationFont [UIFont boldSystemFontOfSize:16]
 //导航栏标题按钮高度和边距
